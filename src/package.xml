@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>BenefitVerificationController</members>
+        <members>BenefitVerificationControllerTest</members>
+        <members>BenefitVerificationResultAPI</members>
+        <members>BenefitVerificationResultAPITest</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>CareBenefitVerifyRequest</members>
+        <members>CoverageBenefit</members>
+        <members>Logger__c</members>
+        <members>MemberPlan</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Benefit_Verification_API</members>
+        <name>NamedCredential</name>
+    </types>
+    <types>
+        <members>Care_Rep_Queue</members>
+        <name>Queue</name>
+    </types>
+    <version>61.0</version>
+</Package>

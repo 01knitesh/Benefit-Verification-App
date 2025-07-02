@@ -78,6 +78,13 @@ force-app/main/default/
 - **Method:** `POST`
 - **Description:** Receives verification results from the external API, processes them, and creates `CoverageBenefit` records linked to `CareBenefitVerifyRequest`.
 
+##  Error Handling
+Requests are validated to ensure required fields like requestId, status, and statusReason are present.
+
+Transient API errors trigger up to 3 retry attempts with exponential backoff.
+
+Errors and exceptions are logged in Logger__c with detailed messages and stack traces.
+
 ### Sample Request
 
 ```json
@@ -99,9 +106,3 @@ force-app/main/default/
   "success": false,
   "error": "Invalid request: Missing required field 'requestId'."
 }
-##  Error Handling
-Requests are validated to ensure required fields like requestId, status, and statusReason are present.
-
-Transient API errors trigger up to 3 retry attempts with exponential backoff.
-
-Errors and exceptions are logged in Logger__c with detailed messages and stack traces.
